@@ -1,0 +1,395 @@
+@charset "utf-8";
+/**********************
+/样式重置
+**********************/
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+}
+h1, h2, h3, h4, h5, h6 {font-weight: 400;}
+body {
+  font-size: 12px;
+  color: #666;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #016dff;
+}
+a:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #1977f6;
+}
+br {
+  line-height: 8px;
+  margin: 0px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: "microsoft yahei", 微软雅黑, 宋体, helvetica, tahoma, arial;
+  margin: 0px;
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(24,144,255, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24,144,255, 0.8);
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-resizer {
+  display: none;
+}
+/********************************
+*项目全局公共样式
+********************************/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*IE/7/6*/
+}
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  width: auto;
+  *zoom: 1;
+  *overflow: visible;
+  -webkit-transition: background-color .1s linear;
+  -moz-transition: background-color .1s linear;
+  -o-transition: background-color .1s linear;
+  transition: background-color .1s linear;
+}
+.btn_list{
+  margin-top: 5px;
+}
+.CustomButton {
+  box-shadow: 1.7px 2px 5px 0px rgba(64, 158, 255, 0.5);
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color:  #409EFF;
+  margin: 0px 2px 0px 2px !important;
+}
+
+.bg_f3 {
+  background: #f3f3f3;
+  padding: 0;
+  margin: 0;
+}
+.main {
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+.lcPage {
+  min-width: 1200px;
+}
+.form_content{
+  padding: 10px 20px;
+}
+.panelWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  box-shadow: 0px 1px 1px rgba(5, 1, 1, 0.15);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.panelWrapper .title-container {
+  padding: 0 10px;
+  background: #fff;
+  height: 41px;
+  padding-left: 17px;
+  padding-right: 22px;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.panelWrapper .title-container .title {
+  color: #2f2f2f;
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 13px;
+  line-height: 41px;
+  height: 41px;
+  float: left;
+  margin-right: 10px;
+  background: url(../images/icon-border.png) left top 12px no-repeat;
+}
+.panelWrapper .title-container .more {
+  line-height: 41px;
+  height: 41px;
+  float: right;
+}
+.panelWrapper .title-container div.button a {
+  float: left;
+  margin-top: 8px;
+  height: 26px;
+  margin-left: 15px;
+  box-shadow: 1px 1px 3px rgba(0, 146, 215, .4);
+  font-size: 12px;
+  color: #016dff;
+  line-height: 22px !important;
+  padding: 2px 10px;
+  box-sizing: border-box;
+  outline: none;
+  min-width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  background: #fff;
+  border-color: transparent;
+}
+
+/**ant 样式覆盖**/
+.ant-input,.ant-select,.ant-tree {
+  font-size: 12px;
+}
+.ant-breadcrumb {
+  font-size: 12px;
+}
+.ant-menu {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+ /* background-color: #1890ff;*/
+  background: url(../images/gradualBg.png) left center no-repeat;
+}
+/**ant 样式覆盖 end**/
+
+/***form表单样式***/
+.popContent {
+  min-width: 1140px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+.container-header{
+  width: 100%;
+  height: 50px;
+  min-width: 1140px;
+  box-shadow: 0 1px 5px rgba(22, 25, 76, 0.3);
+  background: #ffffff url(../images/headerBg1.png) center top no-repeat;
+  background-size: 100% 70px;
+  background-color: #0092d7;
+  margin-bottom: 15px;
+}
+.container-header .Wall {
+  height: 50px;
+  min-width: 1140px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container-header .Wall .words {
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+}
+
+.dialog-btns {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+  padding: 10px 10px;
+  background: rgba(255, 255, 255, .9);
+  z-index: 8999;
+}
+.dialog-btns button, .dialog-btns a {
+  height: 30px;
+  padding: 0px;
+  min-width: 80px;
+  font-size: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: normal;
+  line-height: 28px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+}
+.btn_primary, .btn_save, .btn_sure, .btn_accept, .btn_receivef, .btn_print, .btn_reply, .btn_pass, .btn_check, .btn_submit, .btn_import, .alert_link a {
+  background-color: #016dff;
+  border-color: #0092d7;
+  color: #fff;
+}
+.btn_primary:hover, .btn_save:hover, .btn_sure:hover, .btn_accept:hover, .btn_receivef:hover, .btn_print:hover, .btn_reply:hover, .btn_pass:hover, .btn_check:hover, .btn_submit:hover, .btn_import:hover, .alert_link a:hover {
+  background-color: #255acd;
+}
+
+.btn_default, .btn_search, .btn_new, .btn_del, .btn_cancel, .btn_return, .btn_reset {
+  background-color: #e5f0ff;
+  border-color: #e4f3fa;
+  color: #016dff;
+  padding-top: 1px!important;
+}
+.btn_default:hover, .btn_search:hover, .btn_new:hover, .btn_del:hover, .btn_cancel:hover, .btn_return:hover, .btn_reset:hover {
+  background-color: #d0e1fc;
+}
+
+.apply-step-table{
+  padding: 15px 20px;
+  border: 0px solid #ddd;
+  border-top: 0px;
+  background: #fff;
+}
+
+
+/* .el-table {
+  overflow-x: auto;
+}
+.el-table__header-wrapper,
+.el-table__body-wrapper,
+.el-table__footer-wrapper {
+  overflow: visible;
+}
+.el-table::after {
+  position: relative;
+}
+.el-table--scrollable-x .el-table__body-wrapper {
+  overflow: visible;
+} */
+
+
+
+.form_detail{
+  overflow:auto;
+  padding-bottom:50px
+}
+.el-radio{
+  margin-right: 10px;
+}
+.ant-table-content{
+  font-size: 12px;
+}
+.v-modal{
+  opacity: .3;
+}
+.el-table .cell{
+  min-height: 30px;
+}
+/* .multiple-item{
+  position: relative;
+}
+.multiple-item .multiple-select{
+  opacity: 0;
+  position:absolute;
+  top:0;
+  left:0
+} */
+
+/* icon */
+.icon_ht_status_main{
+  display: inline;
+}
+.icon_ht_status{
+  display: inline-block;
+  width: 17px;
+  height: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+a.icon_ht_status_1{
+  background-image: url('./../images/icon_ht_status_1.png');
+}
+a.icon_ht_status_2{
+  background-image: url('./../images/icon_ht_status_2.png');
+}
+a.icon_ht_status_3{
+  background-image: url('./../images/icon_ht_status_3.png');
+}
+a.icon_ht_status_4{
+  background-image: url('./../images/icon_ht_status_4.png');
+}
+a.icon_ht_status_5{
+  background-image: url('./../images/icon_ht_status_5.png');
+}
+a.icon_ht_status_6{
+  background-image: url('./../images/icon_ht_status_6.png');
+}
+a.icon_ht_status_7{
+  background-image: url('./../images/icon_ht_status_7.png');
+}
+a.icon_ht_status_8{
+  background-image: url('./../images/icon_ht_status_8.png');
+}
+/* ------end icon---- */
+
+.ant-select-tree-dropdown{
+  z-index: 99999;
+}
+.el-icon-loading{
+  font-size: 30px;
+}
+.ant-form-item {
+  margin-bottom: 10px;
+}

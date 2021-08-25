@@ -1,0 +1,15 @@
+.ant-table-placeholder {
+	border-bottom: none !important;
+	.global-common-style {
+		min-height: 20rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #909399;
+		i {
+			font-size: 40px;
+			margin-bottom: 15px;
+		}
+	}
+}

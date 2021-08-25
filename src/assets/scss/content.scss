@@ -1,0 +1,138 @@
+@mixin contentPad($px) {
+  $default: 10px;
+
+  @if $px=null {
+    padding: $default;
+  } @else {
+    padding: $px;
+  }
+}
+
+// 媒体查询尺寸
+// 公共样式表
+$content-padding: 0px 20px; // 内容内容器区域内边距
+$layout-back-color: #f8fafc; // 内容外容器区域底色
+$layout-content-padding: 15px 16px 16px; // 内容外容器区域内边距
+$content-back-color: #ffffff; // 内容内容器区域底色
+$content-head-height: 53px;
+$content-head-pad: 10px 0;
+$content-line-height: 34px;
+$table-cell-padding: 16px; // antd 表格单元格内间距
+$table-tr-background: #f8f8fa; // 表格偶数行的底色
+$text-main-size: 12px; // 正文，表格文字，表单输入及提示语字体大小
+$text-main-color: #333; // 正文，表格文字，表单输入字体颜色
+$text-placeholder-color: #aaa;
+// 微标
+$success: #22ad3c;
+$processing: #559bff;
+$error: #ff5723;
+$warning: #faa51f;
+
+td {
+  //   word-wrap: break-word;
+  word-break: break-all;
+
+  // 徽标及文字的颜色
+  .ant-badge-status-success {
+    background: $success;
+
+    & + .ant-badge-status-text {
+      color: $success;
+    }
+  }
+
+  .ant-badge-status-processing {
+    background: $processing;
+
+    & + .ant-badge-status-text {
+      color: $processing;
+    }
+  }
+
+  .ant-badge-status-error {
+    background: $error;
+
+    & + .ant-badge-status-text {
+      color: $error;
+    }
+  }
+
+  .ant-badge-status-warning {
+    background: $warning;
+
+    & + .ant-badge-status-text {
+      color: $warning;
+    }
+  }
+}
+
+// 设置input placeholder的大小和颜色
+@mixin setInputPlaceholder(
+  $color: $text-placeholder-color,
+  $fontSize: $text-main-size
+) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: $fontSize;
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: $fontSize;
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: $fontSize;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: $fontSize;
+    color: $color;
+  }
+}
+
+.contentPart {
+  width: 100%;
+  height: 100%;
+  background: $content-back-color;
+  box-shadow: 0 0 6px rgba(5,1,1,.1);
+  // border-radius: 4px;
+  overflow-y: auto;
+}
+
+[unselectable='unselectable'] {
+  margin: 16px 0;
+  float: right;
+}
+
+[customColor='delete'] {
+  background: #ff5723;
+  color: white;
+  border: 1px solid #ff5723;
+}
+
+[customColor='delete']:hover {
+  background: rgb(253, 123, 83);
+  border: 1px solid rgb(253, 123, 83);
+}
+
+.evenRow {
+  background: #f8f8fa;
+}
+
+.baseRow {
+  background: #ffffff;
+}
+
+.iconHover {
+  cursor: pointer;
+}
+
+.iconHover:hover {
+  color: #559bff;
+}

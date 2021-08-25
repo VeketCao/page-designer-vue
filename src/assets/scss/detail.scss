@@ -1,0 +1,15 @@
+.containter-wrapper{
+  padding: 15px 20px;
+}
+.form-textarea{
+  height: 100px;
+  /deep/ textarea{
+    height: 100%;
+  }
+}
+/deep/ .el-form-item__label{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 12px;
+}
